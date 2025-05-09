@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { initFlowbite } from "flowbite";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.jpeg";
 
 const Sidebar = () => {
   const menuItems = [
@@ -11,7 +12,7 @@ const Sidebar = () => {
       href: "/",
     },
     {
-      icon: "M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z",
+      icon: "M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H虎.78l-.5-2H15Z",
       label: "Attendance",
       href: "#",
       subItems: [
@@ -64,7 +65,16 @@ const Sidebar = () => {
         aria-label="Sidebar"
       >
         <div className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800">
-          <ul className="space-y-2 font-medium">
+          {/* Logo Section */}
+          <div className="mb-4">
+            {/* <h2 className="text-center text-2xl font-semibold">Vismaya</h2> */}
+            <img
+              src={logo}
+              alt="Logo"
+              className="mx-auto h-20 w-auto object-contain"
+            />
+          </div>
+          <ul className="mt-12 space-y-2 font-medium">
             {menuItems.map((item, index) => (
               <li key={index}>
                 {item.subItems ? (
