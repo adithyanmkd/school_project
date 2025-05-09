@@ -1,5 +1,3 @@
-import { DarkThemeToggle } from "flowbite-react";
-
 import { BrowserRouter } from "react-router-dom";
 
 import AdminRoute from "./routes/AdminRoute";

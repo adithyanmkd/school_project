@@ -1,5 +1,6 @@
 // src/routes/AdminRoute.jsx
 import { Routes, Route } from "react-router-dom";
+import React from "react";
 
 // Import pages
 import Home from "../pages/Home";
@@ -9,7 +10,12 @@ import AttendanceReport from "../pages/AttendenceReport"; // Add this import
 // Import layout
 import AdminLayout from "../layouts/AdminLayout";
 
-const AdminRoute = ({ theme, setTheme }) => {
+interface AdminRouteProps {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const AdminRoute = ({ theme, setTheme }: AdminRouteProps) => {
   return (
     <Routes>
       <Route element={<AdminLayout theme={theme} setTheme={setTheme} />}>

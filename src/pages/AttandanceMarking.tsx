@@ -1,5 +1,5 @@
 // src/pages/AttendanceMarking.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AttendanceMarking = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
